@@ -13,3 +13,11 @@ let name : unknown = "hanguyen" ; //nhe hon so voi any
 if(typeof(name) === "string") {
     name.toLocaleUpperCase() ;
 }
+//annotation : giai thich  : @Controller @Service //comment
+const myname : string ="hoidanit" ; //string
+
+
+//infer :doan suy luan ra datatype cau bien gan ma minh su dung 
+
+let usename = "hanguyen@gmail" ; 
+let score = [1 , 2, 3 ] ; 
