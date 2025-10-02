@@ -33,22 +33,23 @@ const printInfo = (people:  {
 printInfo(person) ; 
 
 //optional 
-
-const student1: {
-    name: string;
-    address: string;
-    phone?: string;
-} = {
+const student1 //infer
+  = {
     name : "Eric" , 
     address : "Bac Ninh" , 
     phone :  "918312312"  , 
 }
 
-const student2: {
-    name: string;
-    address: string;
-    phones?: string;
-} = {
+const student2 = {
     name : "Eric" , 
     address : "Bac Ninh" , 
 }
+const student = (hs: {
+    name: string;
+    address: string;
+    phones?: string;
+}) => {
+    console.log("student : " , hs) ; 
+}
+student(student2) ; 
+student(student1) ; 
