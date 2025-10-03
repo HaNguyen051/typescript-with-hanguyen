@@ -59,11 +59,13 @@ const  printCourseInfo = (course : TCourse) => {
    
     if(course.students.length)
     {
-        console.log("Name Course :" , course.courseId, "Number Student :",course.students.length) ;
-        console.log(course.students)
-    }
+        console.log("Name Course :" , course.title, "Number Student :",course.students.length) ;
+        const studentList = course.students.map(item =>item.name) ; 
+        //
      
-    else console.log("Name Course :" , course.courseId,"Chưa có học viên nào") ; 
+        console.log("Liệt kê từng thành học viên : " , studentList.join(","))
+    }
+    else console.log("Name Course :" , course.title,"Chưa có học viên nào") ; 
 } 
 
 registerStudentToCourse(student1 , course1) ; 
