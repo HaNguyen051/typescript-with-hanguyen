@@ -3,7 +3,8 @@
 export{} ; 
 console.log("video 93") ; 
 
-//union
+//union: | 
+
 let username : number | string = "hoidanit" ; 
 
 username = 12 ; 

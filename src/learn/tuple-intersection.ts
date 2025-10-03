@@ -37,4 +37,3 @@ const hanguyen : TProgrammer =  {
     phone :  132112 , 
     language  :  "javascript" ,
 }
-

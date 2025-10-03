@@ -18,4 +18,19 @@ const user : IPerson = {
     sayHi : () =>console.log("im user") ,  
 }
 user.sayHi() ; 
+
+//extend interface  ; 
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  breed: string;
+}
+
+const myDog: Dog = {
+  name: "Buddy",
+  breed: "Golden Retriever",
+};
+
 //user.language = "en" ; 

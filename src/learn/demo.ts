@@ -19,3 +19,5 @@ const address:string[] =["hanoi" , 'bac ninh'] ;
 const name2: Array<string> = ["hanoi" , 'bac ninh'] ;
 
 console.log("score : " , score) ; 
+
+
