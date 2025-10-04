@@ -14,13 +14,12 @@ class Student {
         console.log(this.name , "đang học")
     }
 }
-
 const student1 = new Student()  ; 
 student1.id = 1 ; 
 student1.name = "hane" ; 
-student1.study() ; 
-
-console.log(">>>>=========") ; 
+student1.study() ;
+ 
+console.log(">>>>=========") ;
 
 const student2 = new Student()  ; 
 student2.id = 2 ; 
