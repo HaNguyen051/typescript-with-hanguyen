@@ -10,7 +10,6 @@ class Person {
     //overload 
     constructor() ; 
     constructor(name:string , age : number) ; 
-
     constructor(name?:string , age? :number) 
     {
         this.name = name ?? "unknown"; 
