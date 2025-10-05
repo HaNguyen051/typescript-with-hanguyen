@@ -8,7 +8,7 @@ function merge<T, U> (a : T , b : U ){
     return [a , b] ;
 }
 
-const a = merge<string , number>("ha nguyen" , 20) ; 
+const a = merge<string , number>("ha nguyen" , 20) ; //return [hanguyen , 30] ; 
 
 //khai bao generic ket hop kieu type
 
@@ -21,8 +21,8 @@ type MyArr<T> = T[] ;
 type MyData<T> = {
     data : T 
 } ; 
-
-const b :MyArr<number> = [2 , 21, 321, 32, 2] ; 
+//generic tyoe myArr
+const b : MyArr<number> = [2 , 21, 321, 32, 2] ; 
 
 
 //generic voi classes 
@@ -76,9 +76,11 @@ function printValue<T>(value: T) {
 }
     //with basic
 function logLength<T extends { length: number }>(value: T) {
-  console.log(value.length);
+  console.log(value);
 } ; 
-logLength("avs") ; 
+logLength({id : 123 , 
+    name : "ha " , 
+}) ; 
 
 logLength([1 , 2  , 2]) ; 
 
@@ -127,5 +129,5 @@ testInterface({id : 13 , name : "hanguyen" , email : " abc@gmail.com" , phone : 
     const user = {name : "hoidanit" , age : 25} ; 
     getProperty(user, "name") ; 
     getProperty(user, "age") ; 
-    getProperty(user, "email") ; 
+    //getProperty(user, "email") ; 
     
