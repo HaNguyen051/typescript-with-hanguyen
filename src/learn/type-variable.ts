@@ -78,9 +78,7 @@ function printValue<T>(value: T) {
 function logLength<T extends { length: number }>(value: T) {
   console.log(value);
 } ; 
-logLength({id : 123 , 
-    name : "ha " , 
-}) ; 
+logLength(" dasdas" ) ; 
 
 logLength([1 , 2  , 2]) ; 
 

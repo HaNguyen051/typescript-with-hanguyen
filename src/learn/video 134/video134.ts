@@ -10,5 +10,5 @@ const sum = (a  : number , b : number) => {
 
 
 export{
-    sum
+    sum, hoidanit
 }
