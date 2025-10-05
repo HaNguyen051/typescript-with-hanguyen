@@ -68,3 +68,64 @@ const fetchUser = async () => {
     }
     result.data.map(item => item.name) ; 
 }
+//generic constraints
+
+    
+function printValue<T>(value: T) {
+  console.log(value);
+}
+    //with basic
+function logLength<T extends { length: number }>(value: T) {
+  console.log(value.length);
+} ; 
+logLength("avs") ; 
+
+logLength([1 , 2  , 2]) ; 
+
+    //with interface 
+function testInterface<T extends IUser>(value : T){
+    console.log(value) ; 
+}
+
+testInterface({id : 13 , name : "hanguyen" , email : " abc@gmail.com" , phone : 2811214211}) ; 
+// testInterface({id : 13 , name : "hanguyen" ,}) ; 
+
+
+//raang buoc voi class 
+    class Animal{
+        move() {
+            console.log("moving");  
+        }
+    }
+    class Dog extends Animal{
+        bark()
+        {
+            console.log("woof!");
+            
+        }
+     }
+
+    function testClass<T extends Animal> (value : T) {
+        console.log(value) ;
+        //neu dung method cua con  trong animal : 
+        if(value instanceof Dog) {
+            value.bark() ; 
+        }
+    }
+    const a2 = new Dog() ; 
+    const b2 = new  Animal() ; 
+    testClass(a2) ; 
+    testClass(b2) ; 
+
+
+    //rang buoc keyof
+
+    function getProperty<T , K extends keyof T>(obj : T , key : K)
+    {
+        return obj[key] ; 
+    }
+    const user = {name : "hoidanit" , age : 25} ; 
+    getProperty(user, "name") ; 
+    getProperty(user, "age") ; 
+    getProperty(user, "email") ; 
+    
