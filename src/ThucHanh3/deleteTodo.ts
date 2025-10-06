@@ -13,7 +13,12 @@ const deleteTodo = () => {
             
             //delete todo
             if(id){
-                removeTodo(+id)
+                removeTodo(+id) ; 
+
+                //delete rơ with js 
+                const row = button.closest("tr") ; 
+                if(row) row.remove() ; 
+
             } 
         })
     })
@@ -24,8 +29,7 @@ const removeTodo = (id:number ) => {
     {
         const todoList = JSON.parse(todoListStr) as myTodo[] ;
         const newList = todoList.filter(todo => todo.id != id) ; 
-        localStorage.setItem("todoList" , JSON.stringify(newList)) ;
-        window.location.reload();   
+        localStorage.setItem("todoList" , JSON.stringify(newList)) ;  
     }
 }
-export{deleteTodo} ; 
+export{deleteTodo , removeTodo} ; 
